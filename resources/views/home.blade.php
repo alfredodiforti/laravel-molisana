@@ -1,28 +1,61 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layout.struttura')
 
-        <title>Laravel</title>
+@section('content')
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
+<section class="container ">
+    <h2>le lunghe</h2>
+    <div class="slots">
+        @foreach ( $lunghe as $slot )
+         <div class="slot">
+             <img src="{{ $slot ['src']}}" alt="{{$slot['titolo']}}">
+             <h3>{{$slot['titolo']}}</h3>
+         </div>            
+        @endforeach
+    </div>
+</section>
+<section class="container ">
+    <h2>le corte</h2>
+    <div class="slots">
+        @foreach ( $corte as $slot )
+         <div class="slot">
+             <img src="{{ $slot ['src']}}" alt="{{$slot['titolo']}}">
+             <h3>{{$slot['titolo']}}</h3>
+         </div>            
+        @endforeach
+    </div>
+</section>
+<section class="container ">
+    <h2>le cortissime</h2>
+    <div class="slots">
+        @foreach ( $cortissime as $slot )
+         <div class="slot">
+             <img src="{{ $slot ['src']}}" alt="{{$slot['titolo']}}">
+             <h3>{{$slot['titolo']}}</h3>
+         </div>            
+        @endforeach
+    </div>
+</section>
 
-        <!-- Styles -->
-       
-    </head>
-    <body>
-        @include('partials.header')
 
-       
 
-       <main>
-           <h1>homepage</h1>
-       </main>
 
-       <footer>
-           <span>site molisana</span>
-       </footer>
-    </body>
-</html>
+
+
+
+
+
+
+{{-- <section class="container">
+    <div class="slots">
+        @foreach ( $slots as $slot )
+         <div class="slot">
+             <img src="{{ $slot['src']}}" alt="{{$slot['titolo']}}">
+             <h3>{{$slot['titolo']}}</h3>
+
+         </div>            
+        @endforeach
+    </div>
+</section> --}}
+    
+@endsection
+
