@@ -48,9 +48,10 @@ Route::get('/news', function(){
 
 Route::get('/product/{id}', function($id) {
 
-    $data = config(' mydata');
+    $data = config('mydata');
 
     $product = $data[$id];
+
     $length = count($data) -  1 ;
     return view('product', compact('product','id','length'));
 })-> name('product');

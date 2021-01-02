@@ -14,7 +14,7 @@
 </div>
 
 <section>
-     <div class="container">
+     <div class="container product">
          <div>
              <h1>{{ $product['titolo'] }}</h1>
              <img src="{{ $product['src-h'] }}" alt="{{$product['titolo']}}">
