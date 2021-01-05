@@ -82,3 +82,39 @@ main .product p {
   padding-bottom: 40px;
   font-size: 24px;
 }
+main .cursor {
+  display: flex;
+  justify-content: space-between;
+  vertical-align: middle;
+  padding-left: 30px;
+  padding-right: 30px;
+  position: relative;
+  top: 100px;
+}
+main .cursor .prev, main .cursor .next {
+  font-size: 70px;
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+  main .backhome .slots {
+    display: flex;
+    justify-content: center;
+  }
+  main .backhome .slots .slot {
+    flex-basis: 90%;
+  }
+  main .backhome .slots .slot img {
+    width: 100%;
+    padding: 5px;
+  }
+  main .product p {
+    text-align: justify;
+    padding: 0px 30px;
+  }
+  main .cursor {
+    position: relative;
+    top: 25px;
+  }
+}

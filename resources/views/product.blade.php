@@ -2,16 +2,19 @@
 
 @section('content')
 
-<div>
-    @if ($id > 0 )
-     <a href="{{ route('product', $id - 1) }}">prev</a>
-     @endif
+<div class="cursor">
+    <div>
+        @if ($id > 0 )
+         <a class="prev" href="{{ route('product', $id - 1) }}"><i class="fas fa-caret-square-left"></i></a>
+         @endif
+    </div>
+    <div>
+        @if ($id < $length )
+         <a class="next" href="{{ route('product', $id + 1) }}"><i class="fas fa-caret-square-right"></i></a>
+         @endif
+    </div>
 </div>
-<div>
-    @if ($id < $length )
-     <a href="{{ route('product', $id + 1) }}">next</a>
-     @endif
-</div>
+
 
 <section>
      <div class="container product">
